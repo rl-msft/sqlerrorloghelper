@@ -1,6 +1,5 @@
 Windows Registry Editor Version 5.00
 
-;V 1.0 - for any issues contact rafidl@microsoft.com
 ;main menu
 [HKEY_CLASSES_ROOT\*\shell\SqlErrorlogHelper]
 "Subcommands"="SqlMenuRemoveLoginBackupAGGEntries; SqlMenuRemoveBackupEntries; SqlMenuRemoveLoginEntries; SqlMenuRemoveAGGEntries; SqlMenuRemoveBasedClipboard; SqlMenuFilterBasedClipboard; SqlMenuSplitFile; SqlMenuChangeEncoding; SqlMenuCheckUpdates"
@@ -14,7 +13,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",259"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveLoginBackupAGGEntries\command]
-@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuRemoveLoginBackupAGGEntries.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuRemoveLoginBackupAGGEntries.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 ;Remove Backup Entries
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveBackupEntries]
@@ -22,7 +21,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",78"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveBackupEntries\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuRemoveBackupEntries.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuRemoveBackupEntries.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 ;Remove Logins Entries
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveLoginEntries]
@@ -30,7 +29,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",170"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveLoginEntries\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuRemoveLoginEntries.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuRemoveLoginEntries.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 ;Remove Non Actionable AAG messages
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveAGGEntries]
@@ -38,7 +37,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\imageres.dll\",162"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveAGGEntries\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuRemoveAGGEntries.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuRemoveAGGEntries.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 ;Remove Entries based on Clipboard entry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveBasedClipboard]
@@ -46,7 +45,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",260"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuRemoveBasedClipboard\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuRemoveBasedClipboard.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuRemoveBasedClipboard.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 ;Filter based on Clipboard entry
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuFilterBasedClipboard]
@@ -54,7 +53,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",68"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuFilterBasedClipboard\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuFilterBasedClipboard.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuFilterBasedClipboard.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 
 ;Split to Multiple Files around 500K each
@@ -63,7 +62,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",250"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuSplitFile\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuSplitFile.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuSplitFile.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 ;Change Encoding
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuChangeEncoding]
@@ -71,7 +70,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",69"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuChangeEncoding\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuChangeEncoding.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuChangeEncoding.ps1').Content)) -ArgumentList ($args + @('%1')))"
 
 
 ;Check for updates
@@ -80,4 +79,4 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",238"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SqlMenuCheckUpdates\command]
-@="powershell -WindowStyle Minimized -noprofile  -ExecutionPolicy Bypass -File \"\\\\dsdb\\SQLskills\\Rafidl\\SQLmenu\\Scripts\\SqlMenuCheckUpdates.ps1\" \"%1\""
+@="powershell -WindowStyle Minimized -noprofile -ExecutionPolicy Bypass -command (Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/Scripts/SqlMenuCheckUpdates.ps1').Content)) -ArgumentList ($args + @('%1')))"
