@@ -1,3 +1,11 @@
+to install the menu run the following command from elevated CMD
+
+\\dsdb\SQLskills\Rafidl\SQLmenu\setup.reg 
+
+to uninstall run the following command from elevated CMD
+
+\\dsdb\SQLskills\Rafidl\SQLmenu\uninstall.reg
+
 Notes:
 - There is no special installation required, just simple reg update and it will add new menu under windows right click context menu, all submenu items PowerShell scripts are hosted on network share which would allow me to update those scripts if needed and those changes would reflect to anyone using the menu without any user action.
 - There is no modification happening to any file, processed file will be added as new file with the same as the original file with action name taking against it
