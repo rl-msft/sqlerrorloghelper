@@ -22,10 +22,10 @@ regedit.exe /s "%temp%\uninstall.reg"
   for example if you process a file named below errorlog.1 you will see new processed file name errorlog.1.logins_removed.OUT
 - For now, I opted out from adding any progress bar to the PowerShell scripts since I have seen progress bar code was actually adding more cycles and eventually made any file processing slower, so, For now, when you select any option in the mean you should notice windows task PowerShell icon appears, once the icon disappear this is your indicate that processing has completed and you can open processed file.
 
-   ![Image description](https://github.com/rl-msft/sqlerrorloghelper/blob/master/menu.JPG)
+  ![Image description](https://github.com/rl-msft/sqlerrorloghelper/blob/master/menu.JPG)
 
 There is no modification happening to any file, processed file will be added as new file with the same as the original file with action name taking against it, for example below errorlog.1 was processed to remove logins entries 
 
-   ![Image description](https://github.com/rl-msft/sqlerrorloghelper/blob/master/fileout.JPG)
+  ![Image description](https://github.com/rl-msft/sqlerrorloghelper/blob/master/fileout.JPG)
 
 
