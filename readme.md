@@ -12,6 +12,7 @@ regedit.exe /s "%temp%\setup.reg"
 ```
 
 just right click any errorlog file and you should see this menu
+
   ![Image description](https://github.com/rl-msft/sqlerrorloghelper/blob/master/menu.JPG)
 
 There is no modification happening to any file, processed file will be added as new file with the same as the original file with action name taking against it, for example below errorlog.1 was processed to remove logins entries 
