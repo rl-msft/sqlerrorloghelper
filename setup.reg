@@ -4,7 +4,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\SqlErrorlogHelper]
 "Subcommands"="SqlMenuRemoveLoginBackupAGGEntries; SqlMenuRemoveBackupEntries; SqlMenuRemoveLoginEntries; SqlMenuRemoveAGGEntries; SqlMenuRemoveBasedClipboard; SqlMenuFilterBasedClipboard; SqlMenuSplitFile; SqlMenuChangeEncoding; SqlMenuCheckUpdates"
 "Icon"="\"C:\\Windows\\System32\\shell32.dll\",70"
-"MUIVerb"="Sql Errorlog Helper"
+"MUIVerb"="QuickErrorlog Menu"
 "Version"="1.0"
 
 ;Remove Login, Backup and Non Actionable AAG Entries
