@@ -1,14 +1,13 @@
-to install the menu, download this reg file https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/setup.reg 
+to install the menu run this command
 
-then regedit run the following command from elevated CMD
+powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/setup.reg' -OutFile $env:temp\setup.reg"
+regedit.exe /s "%temp%\setup.reg"
 
-  regedit /s setup.reg
 
-to uninstall, download this reg file https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/uninstall.reg
+to uninstall, run this command
 
-then run the following command from elevated CMD
-
-  regedit /s uninstall.reg
+powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/uninstall.reg' -OutFile $env:temp\uninstall.reg"
+regedit.exe /s "%temp%\uninstall.reg"
 
 
 Notes:
