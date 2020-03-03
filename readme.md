@@ -1,4 +1,4 @@
-# SQL Errorlog Windows Context menu
+# SQL Errorlog Helper Windows Context menu
 
 this new windows context menu will help to filter out nonactionable entries you might see in errorlog, it will help reducing the amount of time we spent dealing with large errorlog files.
 
