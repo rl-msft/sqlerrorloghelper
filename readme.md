@@ -1,6 +1,6 @@
 # SQL Errorlog Helper Windows Context menu
 
-this new windows context menu will help to filter out nonactionable entries you might see in errorlog, it will help reducing the amount of time we spent dealing with large errorlog files.
+its windows context menu than will help to filter out nonactionable entries you might see in errorlog, it will help reducing the amount of time we spent dealing with large errorlog files.
 
 There is no special installation required, just simple reg update and it will add new menu under windows right click context menu, all submenu items PowerShell scripts are hosted on github which would allow me to update those scripts if needed so they can reflect to anyone using the menu without any user action.
 
