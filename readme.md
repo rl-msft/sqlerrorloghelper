@@ -1,5 +1,7 @@
 # SQL errorlog Windows Context menu
 
+this new windows context menu will help to filter out nonactionable entries you might see in errorlog, it will help reducing the amount of time we spent dealing with large errorlog files.
+
 to **install** the menu run this command
 
 ```shell script
@@ -19,3 +21,5 @@ regedit.exe /s "%temp%\uninstall.reg"
 - There is no modification happening to any file, processed file will be added as new file with the same as the original file with action name taking against it
   for example if you process a file named below errorlog.1 you will see new processed file name errorlog.1.logins_removed.OUT
 - For now, I opted out from adding any progress bar to the PowerShell scripts since I have seen progress bar code was actually adding more cycles and eventually made any file processing slower, so, For now, when you select any option in the mean you should notice windows task PowerShell icon appears, once the icon disappear this is your indicate that processing has completed and you can open processed file.
+
+
