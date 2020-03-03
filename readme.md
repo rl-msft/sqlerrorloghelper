@@ -1,14 +1,16 @@
-to install the menu run this command
+to **install** the menu run this command
 
+```shell script
 powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/setup.reg' -OutFile $env:temp\setup.reg"
 regedit.exe /s "%temp%\setup.reg"
+```
 
+to **uninstall** run this command
 
-to uninstall, run this command
-
+```shell script
 powershell -command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/rl-msft/sqlerrorloghelper/master/uninstall.reg' -OutFile $env:temp\uninstall.reg"
 regedit.exe /s "%temp%\uninstall.reg"
-
+```
 
 Notes:
 - There is no special installation required, just simple reg update and it will add new menu under windows right click context menu, all submenu items PowerShell scripts are hosted on network share which would allow me to update those scripts if needed and those changes would reflect to anyone using the menu without any user action.
