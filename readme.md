@@ -1,3 +1,5 @@
+# SQL errorlog Windows Context menu
+
 to **install** the menu run this command
 
 ```shell script
